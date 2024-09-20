@@ -20,8 +20,5 @@ ENTRYPOINT ["iperf3"]
 # If needed you can change/disable health check when starting container.
 # See Docker run reference documentation for more information.
 
-HEALTHCHECK --timeout=3s \
- CMD iperf3 -k 1 -c 127.0.0.1 || exit 1
-
 # iperf3 -s = run in Server mode
 CMD ["-s"]
